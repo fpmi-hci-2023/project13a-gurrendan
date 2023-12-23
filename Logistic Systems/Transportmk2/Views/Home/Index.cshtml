@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Transportmk2.Models.Storage>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Все склады";
+}
+
+<div>
+<table>
+    <tr><td>ID</td><td>Склад</td><td>Ширина</td><td>Долгота</td><td>Товара в наличии</td><td>Необходимо</td><td>Изменить</td><td>Удалить</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Storage_id</td>
+            <td>@item.Storage_name</td>
+            <td>@item.Longitude</td>
+            <td>@item.Latitude</td>
+            <td>@item.Capacity</td>
+            <td>@item.Needed</td>
+            <td><a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Storage_id">Изменить</a></td>
+                <td> <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.Storage_id">Удалить</a></td>
+        </tr>
+    }
+</table>
+<div/>
