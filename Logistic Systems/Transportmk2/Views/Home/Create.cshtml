@@ -1,0 +1,25 @@
+﻿@model Transportmk2.Models.Storage
+@{
+    ViewBag.Title = "Добавление Склада";
+}
+<form asp-action="Create" asp-controller="home">
+    <div class="form-group">
+        <label asp-for="Storage_name" class="control-label">Storage name</label>
+        <input type="text" asp-for="Storage_name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Longitude" class="control-label">Longitude</label>
+        <input type="text" asp-for="Longitude" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Latitude" class="control-label">Latitude</label>
+        <input type="text" asp-for="Latitude" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Capacity" class="control-label">Capacity</label>
+        <input type="number" asp-for="Capacity" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Отправить" class="btn btn-default" />
+    </div>
+</form>

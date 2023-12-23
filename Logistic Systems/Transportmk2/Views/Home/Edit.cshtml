@@ -1,0 +1,40 @@
+﻿@model Transportmk2.Models.Storage
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Изменить данные";
+}
+
+<form asp-action="edit" asp-controller="home" asp-route-id="@Model.Storage_id">
+    <form asp-action="Edit" asp-controller="home">
+        <div class="form-group">
+            <label asp-for="Storage_id" class="control-label">Storage id</label>
+            <input type="hidden" asp-for="Storage_id" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Storage_name" class="control-label">Storage name</label>
+            <input type="text" asp-for="Storage_name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Longitude" class="control-label">Longitude</label>
+            <input type="text" asp-for="Longitude" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Latitude" class="control-label">Latitude</label>
+            <input type="text" asp-for="Latitude" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Capacity" class="control-label">Capacity</label>
+            <input type="number" asp-for="Capacity" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Needed" class="control-label">Needed</label>
+            <input type="number" asp-for="Needed" class="form-control" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Отправить" class="btn btn-default" />
+        </div>
+    </form>
+</form>
